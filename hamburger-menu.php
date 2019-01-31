@@ -24,7 +24,6 @@ session_start();
         </div>
 
             <a href="products-page.php">Producten</a>
-            <!-- <a href="about-us.php">Over ons</a> -->
             <a href="contact.php">Contact</a>
                             <?php 
                     if(!isset($_SESSION["user_id"])){
@@ -37,6 +36,7 @@ session_start();
                 <a href="delete-product.php">Mijn Producten</a>
                 <a href="addproduct.php">Voeg product toe</a>
                 <a href="profile.php">Mijn profiel</a>
+                <a href="message.php">Over ons</a>
                 <a href="logout.php">Uitloggen</a>';
 
              };

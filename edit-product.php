@@ -45,7 +45,11 @@ include("db-connection.php");
     </section>
     <section class="edit-product-form-group">
         <label for="input">Houdbaarsheidsdatum</label>
-        <input type="date" name="expire_input" value="<?php echo $value['expire_date']; ?>">
+        <input type="date" name="expire_input" id="somedate" value="<?php echo $value['expire_date']; ?>">
+        <script>
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementById("somedate").setAttribute('min', today);
+        </script>
     </section>
     <section class="edit-product-form-group">
         <input type="submit" name="save_submit" value="opslaan">

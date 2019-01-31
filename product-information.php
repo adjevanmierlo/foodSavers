@@ -58,13 +58,14 @@
                 $htmlOutput .= '<div class="products-information-info">' . $row['description'];
                 $htmlOutput .= '</div>'; 
                 $htmlOutput .= '<div class="product-information-button">';
-                $htmlOutput .= '<p>'. '<button>' . '<img src="images/chat.png" height="40" width="40">' . '</button>' . '</p>';
+                if(isset($_SESSION["user_id"])){
+                $htmlOutput .= '<p>'. '<a href="message.php?screenname=' . $row['screenname'] . '"><button>'. '<img src="images/chat.png" height="40" width="40">' . '</button>' .  '</a>' . '</p>';
                 if ($row['accept_phone'] === "true"){
                     $htmlOutput .= '<p>'. '<a href="tel:' . $row['phone_number'] . '"><button>'. '<img src="images/smartphone.png" height="40" width="40">' . '</button>' . '</a>' . '</p>';
                     }
                     if ($row['accept_email'] === "true"){
                     $htmlOutput .= '<p>'. '<a href="mailto:' . $row['email'] . '"><button>' . '<img src="images/email.png" height="40" width="40">' . '</button>' . '</p>';
-                    }
+                    }}
                 // $htmlOutput .= '<p>'. '<button>'. '<img src="images/handshake.png" height="50" width="35">' . '</button>' . '</a>' . '</p>';
                 $htmlOutput .= '</div>';
 echo $htmlOutput;

@@ -15,6 +15,7 @@
     if($data->rowCount() > 0){
      
             echo "hoi";
+            $_SESSION['screenname'] = $getData ['screenname'];
             $_SESSION['phone_number'] = $getData['phone_number'];
             $_SESSION['email'] = $getData['email'];
             $_SESSION['name'] = $getData['firstname'];
@@ -25,7 +26,7 @@
 
     }}else{
 
-        // header("Location: login.php?errorCode='password or email = fout'");  
+        header("Location: login.php?errorCode='paswoord of email = fout'");  
     }
 
 

@@ -40,6 +40,11 @@
     </div>
     <div class="navbar-hamburger-menu animated bounceInUp">
         <span onclick="openNav()">&#9776;</span>
+        <?php 
+					if(isset($_GET['errorCode'])){
+						echo $_GET['errorCode'];
+					}
+				 ?>
     </div>
 </div>
 <!--HEADER SEARCHFIELD-->

@@ -5,7 +5,10 @@
     <title>registration</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/signin.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script type="text/javascript" src="js/prompt.js"></script>
 </head>
 
 <body>
@@ -35,9 +38,18 @@
                 <br>
                 <input type="email" name="email" placeholder="E-mail" required>
                 <br>
-                <input type="password" name="password" placeholder="paswoord" required>
+                <input type="password" id="password" name="password" placeholder="paswoord" required>
                 <br>
-                <input type="password" name="password" placeholder="paswoord" required>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="paswoord" required>
+                <span id='message'></span>
+                <script>
+                $('#password, #confirm_password').on('keyup', function () {
+    if ($('#password').val() == $('#confirm_password').val()) {
+        $('#message').html('Matching').css('color', 'green');
+    } else 
+        $('#message').html('Not Matching').css('color', 'red');
+});
+</script>
                 <br>
                 <input type="tel" name="phone_number" placeholder="telefoon nummer" required>
                 <br>
