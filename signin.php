@@ -45,8 +45,12 @@
                 <br>
                 <input type="text" name="house_number" placeholder="huisnummer" required>
                 <br>
+                <section class="input-wrapper">
                 <input class="check" type="checkbox" name="accept-phonenumber_input" value="true">Accepteer telefoon
+                </section>
+                <section class="input-wrapper">
                 <input class="check" type="checkbox" name="accept-email_input" value="true" checked>Accepteer email
+                </section>
                 <input id="lats" type="hidden" name="lat">
                 <input id="lons" type="hidden" name="lon">
 

@@ -59,7 +59,7 @@
 
       };
       } else {
-        echo "hallo";
+        // echo "hallo";
       };
   ?>
     <!-- </table> -->
